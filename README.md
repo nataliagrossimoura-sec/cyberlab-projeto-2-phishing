@@ -1,119 +1,155 @@
 # cyberlab-projeto-2-phishing
 Laboratório completo de análise e prevenção de ataques de phishing (coleta, análise técnica, user awareness e relatório executivo).
-# 🛡️ PROJETO 2 – Laboratório de Cibersegurança
-## Análise e Prevenção de Ataques de Phishing
-
-**Autora:** Natalia Grossi de Oliveira Costa de Moura  
-**Local:** Belo Horizonte – MG  
-**Data:** Novembro de 2025  
-**Trilha:** Portfólio SOC / Cybersecurity Analyst
+# 🧠 CYBERLAB — PROJETO 2: PHISHING  
+**Laboratório Completo de Análise e Prevenção de Ataques de Phishing**
 
 ---
 
-## 📌 Sobre o projeto
-Este projeto faz parte do meu laboratório de cibersegurança e tem como objetivo documentar, de forma técnica e prática, como os ataques de phishing são realizados hoje (2024–2025), por que continuam sendo o vetor nº 1 de incidentes e quais controles uma organização e um usuário podem aplicar para reduzir o risco.
+## 🛡️ Dados do Projeto
 
-O relatório completo foi escrito em formato profissional e pode ser usado em portfólio, entrevistas e como material de conscientização interna.
-
-👉 **Relatório completo:** `docs/Relatorio_Analise_e_Prevencao_de_Ataques_de_Phishing.pdf`  
-
----
-
-## 🧠 Sumário executivo
-- Phishing foi responsável por **cerca de 36%** das violações de dados em 2024 (Verizon DBIR 2024).
-- O APWG registrou **mais de 5 milhões de ataques de phishing no 1º semestre de 2024**, com aumento de 58% ano a ano.
-- O fator humano continua sendo o elo mais fraco: organizações sem treinamento têm taxa de clique entre **25% e 40%**; após programas de conscientização, esse número cai para **menos de 5%**.
-- Ataques direcionados (**spear phishing** e **whaling**) têm taxa de sucesso até **10x maior** que o phishing genérico.
-- A defesa eficaz exige **camadas técnicas (SPF/DKIM/DMARC, e-mail gateway, bloqueio de domínios novos)** + **camada humana (treinamento, simulação, cultura de reporte)**.
-- O projeto também descreve um **plano de resposta** para quando o usuário já clicou.
+- **Título:** Análise e Prevenção de Ataques de Phishing  
+- **Autora:** Natália Grossi de Oliveira Costa de Moura  
+- **Local:** Belo Horizonte – MG  
+- **Data:** Novembro de 2025  
+- **Trilha:** Portfólio SOC / Analista de Segurança Cibernética  
 
 ---
 
-## 🏗 Estrutura do relatório
-O relatório técnico está organizado assim:
+## 📌 Sobre o Projeto
 
-1. **Introdução**
-   - Conceito de phishing e engenharia social
-   - Por que o phishing ainda funciona
-   - Cenário 2024–2025 (Verizon, APWG, CERT.br)
+Este projeto faz parte do meu **laboratório de cibersegurança** e tem como objetivo **analisar tecnicamente** campanhas de phishing reais, **documentar vetores, cabeçalhos e domínios maliciosos**, e criar **materiais de conscientização corporativa** que transformam os achados técnicos em aprendizado prático.
 
-2. **Tipos de Phishing**
-   - Email phishing (genérico)
-   - Spear phishing (direcionado)
-   - Whaling (C-level)
-   - Smishing (SMS)
-   - Vishing (voz)
-   - Clone phishing
-   - Tabela comparativa por sofisticação, taxa de sucesso e alvo
-
-3. **Anatomia de um Ataque (Kill Chain do Phishing)**
-   - Reconnaissance (OSINT)
-   - Elaboração da isca (domínio similar, página clone)
-   - Entrega (bypass de gateways)
-   - Exploração (clique, download, resposta)
-   - Coleta e persistência
-
-4. **Indicadores Técnicos**
-   - Headers suspeitos
-   - Domínios parecidos (typosquatting e homógrafos)
-   - Certificados SSL falsos/recém-criados
-   - Redirecionamentos múltiplos e encurtadores
-
-5. **Estratégias de Prevenção**
-   - **Camada técnica:** SPF, DKIM, DMARC, sandboxing, filtros com ML, bloqueio de domínios recém-registrados
-   - **Camada humana:** treinamentos, simulações recorrentes, botão “reportar phishing”, cultura de segurança
-
-6. **Plano de Resposta a Incidentes**
-   - O que o usuário faz se clicou
-   - O que o time de segurança faz para conter e investigar
-   - Monitoramento por 72h
-
-7. **Conclusão e recomendações**
-   - Segurança como processo contínuo
-   - Integração tecnologia + pessoas
-   - Compartilhamento de IOCs
+O projeto está dividido em **quatro partes principais:**
+1. 🧩 **Análises técnicas individuais (1–8)** — cada uma examinando um ataque real.  
+2. 📊 **Checklist de Phishing** — modelo de verificação usado em investigações.  
+3. 🧾 **Relatório Técnico de Análise e Prevenção** — documento consolidado e visual.  
+4. 💡 **Plano de Conscientização para PMEs** — ação educativa derivada dos achados técnicos.
 
 ---
 
-## 📊 Diagrama do fluxo do ataque
+## 🧠 Estrutura do Repositório
 
-```text
-[1. Reconhecimento / OSINT]
-          |
-          v
-[2. Elaboração da isca]
-(domínio similar, página clone,
-mensagem com urgência/autoridade)
-          |
-          v
-[3. Entrega]
-(e-mail, SMS, WhatsApp ou ligação)
-          |
-          v
-[4. Exploração]
-(vítima clica / baixa / responde)
-          |
-          v
-[5. Coleta de dados]
-(credenciais capturadas, malware,
-acesso inicial ao ambiente)
+cyberlab-projeto-2-phishing/
+├── README.md
+├── /analise
+│ ├── analise_01.md
+│ ├── analise_02.md
+│ ├── analise_03.md
+│ ├── analise_04.md
+│ ├── analise_05.md
+│ ├── analise_06.md
+│ ├── analise_07.md
+│ └── analise_08.md
+├── /docs
+│ ├── Checklist_Phishing.pdf
+│ ├── Relatorio_Analise_e_Prevencao_de_Ataques_de_Phishing.pdf
+│ ├── Plano_Conscientizacao_PMEs.pdf
+│ └── Plano_Conscientizacao_PMEs.pptx
+├── /conhecimento
+│ └── (em construção)
 
-🛠 Ferramentas e referências sugeridas
-Ferramentas: MXToolbox, VirusTotal, URLVoid/CheckShortURL, draw.io/Canva (diagramas)
+---
 
-Fontes sólidas:
-APWG – Phishing Activity Trends Report, Q2 2024
-Verizon – 2024 Data Breach Investigations Report (DBIR)
-Google – Email Security Statistics 2024
-CERT.br – Estatísticas de Incidentes de Segurança no Brasil, 2024
-Microsoft – Digital Defense Report, 2024
-KnowBe4 – Phishing by Industry Benchmarking Report, 2024
+## 🔍 Análises Técnicas (1–8)
 
-🧩 Como este projeto se encaixa no meu portfólio
-Faz parte da minha série de 8 projetos práticos de cibersegurança.
-Demonstra capacidade de análise, documentação técnica e tradução de ameaça para controle (habilidade muito pedida em vagas de SOC e Analista de Segurança).
-Pode ser citado no LinkedIn e no currículo como:
-“Elaboração de relatório técnico sobre análise e prevenção de ataques de phishing, com abordagem em camadas (técnica e humana), baseado em dados de 2024–2025 e referências APWG/Verizon.”
+Cada análise aborda uma amostra real coletada de fontes públicas e e-mails reais, com os seguintes componentes:
 
-✍️ Natalia Grossi de Oliveira Costa de Moura
-Cibersegurança • Documentação técnica • Laboratório próprio
+| Nº | Categoria | Tema | Técnica Identificada | Severidade | Relatório |
+|----|------------|-------|----------------------|-------------|------------|
+| 1 | Bancário | Falso acesso Itaú | Spoofing + Link Malicioso | Alta | [analise_01.md](analise/analise_01.md) |
+| 2 | E-commerce | Pagamento em atraso | Engenharia Social | Média | [analise_02.md](analise/analise_02.md) |
+| 3 | Governo | Multa DETRAN falsa | Domínio homógrafo | Alta | [analise_03.md](analise/analise_03.md) |
+| 4 | Corporativo | Atualização de Senha | Spoof de domínio | Alta | [analise_04.md](analise/analise_04.md) |
+| 5 | Entrega | Correios – Entrega Pendente | Encurtador + malware ZIP | Alta | [analise_05.md](analise/analise_05.md) |
+| 6 | Financeiro | Nota Fiscal – NF-e | PDF malicioso | Alta | [analise_06.md](analise/analise_06.md) |
+| 7 | Streaming | Assinatura Netflix | Phishing genérico | Média | [analise_07.md](analise/analise_07.md) |
+| 8 | Tecnologia | Suporte Microsoft | Engenharia de autoridade | Média | [analise_08.md](analise/analise_08.md) |
+
+Cada arquivo `.md` contém:
+- Análise de cabeçalhos (SPF/DKIM/DMARC)  
+- Rastreio de origem (Received Headers)  
+- Inspeção de links (URLScan / VirusTotal)  
+- Capturas de tela de e-mails e URLs  
+- Avaliação de severidade e recomendações  
+
+---
+
+## ✅ Checklist de Phishing
+
+📄 **Arquivo:** `/docs/Checklist_Phishing.pdf`
+
+Um guia prático com perguntas de verificação rápida, para uso tanto em treinamentos quanto em triagem real.  
+Inclui:
+
+- Verificação de remetente e domínio  
+- Sinais linguísticos e psicológicos (urgência, medo, autoridade)  
+- Links, anexos e certificados SSL  
+- Ações pós-identificação: reportar, isolar e responder  
+
+---
+
+## 🧾 Relatório Técnico de Análise e Prevenção de Ataques de Phishing
+
+📂 **Local:** `/docs/Relatorio_Analise_e_Prevencao_de_Ataques_de_Phishing.pdf`
+
+O relatório consolida os resultados das 8 análises, trazendo:
+- Estatísticas e padrões por tipo de ataque  
+- Indicadores observáveis (IOCs)  
+- Recomendações para usuários e empresas  
+- Fluxo de ataque (Kill Chain)  
+- Frameworks utilizados (MITRE ATT&CK, NIST SP 800-61)  
+- Métricas de mitigação e aprendizado  
+
+---
+
+## 💡 Plano de Conscientização de Segurança para PMEs
+
+📘 **Local:** `/docs/Plano_Conscientizacao_PMEs.pdf`  
+📊 **Versão em Apresentação:** `/docs/Plano_Conscientizacao_PMEs.pptx`
+
+Criação de um programa anual de educação em segurança voltado a pequenas e médias empresas.  
+Inclui cronograma de treinamento, métricas de sucesso, orçamento e recursos necessários.
+
+
+---
+
+## 🧩 Integração com o Laboratório "Entendendo o Phishing"
+
+As análises deste projeto são complementares ao **Projeto 1 — Entendendo o Phishing**, que foca na coleta e classificação de e-mails e URLs.  
+Os dados obtidos lá são utilizados aqui para:
+- Montar as análises técnicas;  
+- Alimentar a planilha de amostras (`project_phishing_entendendo_samples.csv`);  
+- Criar simulações e cenários de conscientização.
+
+---
+
+## 🧠 Conhecimento (em desenvolvimento)
+
+A pasta `/conhecimento/` será usada para incluir:
+- Conceitos resumidos de engenharia social  
+- Explicações sobre protocolos SPF, DKIM e DMARC  
+- Guias de mitigação e resposta  
+
+---
+
+## 🧰 Ferramentas Utilizadas
+
+- **Análise técnica:** MXToolbox, VirusTotal, URLScan.io, Any.Run  
+- **Documentação:** Typora, Canva, draw.io  
+- **Conscientização:** Canva, PowerPoint  
+- **Coleta de amostras:** PhishTank, OpenPhish  
+- **Referências:** APWG, Verizon DBIR, CERT.br, Microsoft, KnowBe4  
+
+---
+
+## 🎯 Impacto e Objetivo
+
+- Demonstrar **capacidade de análise e documentação técnica** com base em amostras reais.  
+- Traduzir achados técnicos em **planos de conscientização corporativa**.  
+- Consolidar material de portfólio para **vagas de SOC e Analista de Segurança Cibernética**.  
+
+---
+
+✍️ **Natália Grossi de Oliveira Costa de Moura**  
+Cibersegurança • Documentação Técnica • Laboratório Próprio  
+📍 Belo Horizonte – MG | Novembro 2025
